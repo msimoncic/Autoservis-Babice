@@ -1,0 +1,96 @@
+.why {
+    background-color: #f4f4f5;
+}
+
+.why__content {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    text-align: -webkit-center;
+
+    @media #{$screen-768} {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    &-area {
+        position: relative;
+
+        @media #{$screen-320} {
+            width: 100%;
+        }
+        @media #{$screen-768} {
+            width: 50%;
+        }
+        @media #{$screen-1200} {
+            width: 33.3333%;
+        }
+    }
+
+    &-info {
+        background-color: $dark;
+        padding: 36px 31px 32px;
+        color: #fff;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        max-width: 320px;
+        
+        -webkit-transition: .5s;
+        transition: .5s;
+        text-align: left;
+
+        @media #{$screen-320} {
+            -webkit-transform: translate(0px, -1px);
+            transform: translate(0px, -1px);
+        }
+        @media #{$screen-768} {
+            -webkit-transform: translate(25px, -70px);
+            transform: translate(25px, -70px);
+        }
+    }
+
+    &-text {
+        padding-left: 10px;
+
+        h2 {
+            color: $red;
+        }
+    }
+
+    &-area:hover {
+        img {
+            -webkit-transform: translate(0px, 82%);
+            transform: translate(0px, 82%);
+        }
+
+        .why__content-info {
+            -webkit-transform: translate(25px, -82%);
+            transform: translate(25px, -82%);
+            background-color: $red;
+        
+            .icon-wrapper {
+                img {
+                    -webkit-transform: unset;
+                    transform: unset;  
+                }
+            }
+        }
+
+        h2 {
+            color: $white;
+        }
+    }
+
+    img {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+        max-width: 320px;
+        -webkit-transition: .5s;
+        transition: .5s;
+    }
+}

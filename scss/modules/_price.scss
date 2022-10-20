@@ -1,0 +1,158 @@
+.price {
+    padding-bottom: 0;
+
+    &__menu-list {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__item {
+        margin-left: 10px;
+        list-style-type: none;
+        padding: 10px;
+        position: relative;
+    }
+
+    &__link {
+        color: $white;
+        text-decoration: none;
+        font-size: 1.6rem;  
+
+        &::before {
+            content: "";
+            position: absolute;
+            -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+            -webkit-transform-origin: right top;
+            transform-origin: right top;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background-color: $red;
+            -webkit-transition: -webkit-transform 0.4s cubic-bezier(1, 0, 0, 1);
+            transition: -webkit-transform 0.4s cubic-bezier(1, 0, 0, 1);
+            transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+            transition: transform 0.4s cubic-bezier(1, 0, 0, 1), -webkit-transform 0.4s cubic-bezier(1, 0, 0, 1);
+        }
+
+        &:hover::before {
+            -webkit-transform-origin: left bottom;
+            transform-origin: left bottom;
+            -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+        }
+    }
+}
+
+.home__price {
+    background-image: linear-gradient(#000,rgba(0,0,0,0)),url(../img/vehicle-mechanic-with-diagnostic-tool-laptop-working-truck-workshop.jpg);
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: -130px;
+    padding-top: 100px;
+    background-size: cover;
+    background-position: center center;
+
+    @media #{$screen-320} {
+        padding-bottom: 30px;
+    }
+    
+    @media #{$screen-1024} {
+        padding-bottom: 100px;
+    }
+
+    &-banner {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        background-color: #000000;
+        opacity: 0.4;  
+    }
+
+    &-title {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+
+        @media #{$screen-320} {
+            padding: 15px;
+        }
+        
+        @media #{$screen-768} {
+            padding: 75px 0;
+        }
+
+        @media #{$screen-1024} {
+            padding: 75px 0;
+        }
+
+        h1 {
+            color: $white;
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    &-services {
+        position: relative;
+        max-width: 1120px;
+        margin: 0 auto;
+        display: grid;
+        gap: 50px;
+        
+    
+        &-service {
+            position: relative;
+            text-align: center;
+            background: $red;
+            opacity: 0.7;
+            min-height: 280px;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); 
+            .text {
+                color: $white;
+                display: none;
+            }
+            h2{
+                color: $white;
+            }
+
+            &:hover {
+                opacity: 1;
+                transition: 0.5s ease-out;
+
+                img {
+                    display: none;
+                }
+
+                .text {
+                    display: block;
+                }
+
+                &-content {
+                    top: 12%;
+                    left: 12%;
+                    width: 75%;
+                }
+            }
+        }
+
+        .blue {
+            background: #81C2EF;
+        }
+        .green {
+            background: #61A65C;
+        }
+
+        &-content {
+            position: absolute;  
+            top: 10%;
+            left: 0px;
+            width: 100%;
+        }
+    }
+}

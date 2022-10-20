@@ -1,0 +1,28 @@
+.content {
+    padding: 20px 15px 25px 15px;
+
+    &__text {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    img {
+        padding: 0 0 25px 0;
+    }
+
+    &__img {
+        padding: 25px 0 25px 0;
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    li {
+        margin-left: 25px;
+    }
+
+    h3 {
+        color: $red;
+        padding: 25px 0 10px 0;
+    }
+}

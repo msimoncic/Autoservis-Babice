@@ -1,0 +1,46 @@
+.table {
+
+    .container {
+        text-align: -webkit-center;
+    }
+
+    table {
+        margin-bottom: 25px;
+    }
+
+    th {
+
+        @media #{$screen-320} {
+            font-size: 1.5rem;
+        }
+
+        @media #{$screen-768} {
+            font-size: 2rem;
+        }
+
+        
+        color: $white;
+        padding: 5px;
+        text-align: left;
+    }
+    td {
+        @media #{$screen-320} {
+            font-size: 1rem;
+        }
+
+        @media #{$screen-768} {
+            font-size: 1.5rem;
+        }
+        color: $white;
+        padding: 5px;
+    }
+    
+    p{
+        padding: 20px 0px;
+        max-width: 800px;
+    }
+
+    &__under {
+        margin-top: -35px;
+    }
+}

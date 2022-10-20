@@ -1,0 +1,120 @@
+.hp__services {
+    background-image: linear-gradient(rgba(36, 36, 36, 0.8), rgba(36, 36, 36, 0.8)), url(../img/hero2.jpg);
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &-heading {
+        color: $white;
+        padding: 30px 0;
+        font-size: 32px;
+    }
+
+    &-row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-content {
+        background-color: rgba(255, 255, 255, .1);
+        position: relative;
+        text-align: left;
+        
+
+        @media #{$screen-320} {
+            -ms-flex: 0 0 90%;
+            flex: 0 0 90%;
+            max-width: 90%;
+            padding: 50px 45px 20px 10px;
+        }
+        
+        @media #{$screen-768} {
+            -ms-flex: 0 0 40%;
+            flex: 0 0 40%;
+            max-width: 40%;
+            padding: 50px 40px 25px 20px;
+        }
+
+        @media #{$screen-1024} {
+            -ms-flex: 0 0 30%;
+            flex: 0 0 30%;
+            max-width: 30%;
+            padding: 40px 30px 37px 30px;
+        }
+
+        p {
+            position: relative;
+        }
+
+        h3 {
+            position: relative;
+            color: $white;
+        }
+
+        .second {
+            display: none;
+        }
+
+        &:hover {
+            .second {
+                display: block;
+            }
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+            -webkit-transform-origin: top right;
+            transform-origin: top right;
+            background-color: $red;
+            -webkit-transition: -webkit-transform .3s;
+            transition: -webkit-transform .3s;
+            transition: transform .3s;
+            transition: transform .3s, -webkit-transform .3s;
+        }
+
+        &::after {
+            content: "";
+            right: -10px;
+            top: -10px;
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-top: 130px solid $red;
+            border-left: 130px solid transparent;
+            -webkit-transition: .3s;
+            transition: .3s;
+        }
+
+        &:hover::before {
+            -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+            -webkit-transform-origin: top left;
+            transform-origin: top left;
+        }
+
+        &:hover::after {
+            border-top: 130px solid #fff;
+        }
+
+        img {
+            position: absolute;
+            right: 5px;
+            z-index: 10;
+            top: 15px;
+        }
+    }
+}
